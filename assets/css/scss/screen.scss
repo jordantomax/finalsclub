@@ -1,0 +1,128 @@
+/*
+Title:	Master styles for screen media
+Author: Jordan Cooperman, jordan@vectormediagroup.com
+Year: 2011
+
+Welcome, thou wanderer of the interwebs!
+If you have any questions, Don't be shy. Send me a line!
+================================================================
+----------------------------------------------------------------
+
+[Table of contents]
+
+ 0.General
+ 1.Layout
+ 2.Navigation
+ 3.Header
+ 4.Footer
+ 5.Pages
+     i.
+ 6.Modules
+ 7.Forms
+ 8.Sprites
+ *.User Defined
+
+----------------------------------------------------------------*/
+
+@import "includes/mixins.scss";
+@import "includes/grid.scss";
+
+/*
+ * media queries included
+ * at end of document
+ */
+
+
+/* 0.`general
+============================================== */
+
+::-moz-selection { background: #44a1dd; color: #fff; text-shadow: none; }
+::selection { background: #44a1dd; color: #fff; text-shadow: none; }
+
+
+/* 1.`layout
+============================================== */
+
+html,
+body {
+    height : 100%;
+    margin : 0;
+}
+
+
+/* 2.`navigation
+============================================== */
+
+nav {
+    ul {
+        @include group;
+    }
+    li {
+        float: left;
+    }
+}
+#main-nav {
+    @include group;
+    background-color: #333;
+
+    ul {
+        float: right;
+    }
+    li {
+        display: inline-block;
+        vertical-align: middle;
+        float: none;
+        margin-left: 20px;
+
+        a {
+            padding: 10px;
+            font-size: 1.4em;
+            font-weight: 300;
+            color: #fff;
+        }
+    }
+}
+
+
+/* 3.`header
+============================================== */
+
+#logo {
+    display: block;
+    float: left;
+    width: 186px;
+    height: 35px;
+    background-color: #555;
+    border-right: 1px solid #fff;
+}
+#header {
+    margin-top: 20px;
+}
+
+
+/* 4.`footer
+============================================== */
+
+#footer {
+    margin: 0;
+}
+
+
+/* 8.`sprites
+============================================== */
+
+.icon,
+.sprite {
+    text-indent : -9999px;
+    line-height : 0;
+    font-size   : 0;
+    overflow    : hidden;
+    display     : block;
+}
+
+.sprite { background-image : url('../img/-sprite-images.png'); }
+.icon { background-image   : url('../img/-sprite-icons.png'); }
+
+/* media queries */
+
+@import "includes/media.scss";

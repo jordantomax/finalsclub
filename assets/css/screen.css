@@ -1,0 +1,190 @@
+/*
+Title:	Master styles for screen media
+Author: Jordan Cooperman, jordan@vectormediagroup.com
+Year: 2011
+
+Welcome, thou wanderer of the interwebs!
+If you have any questions, Don't be shy. Send me a line!
+================================================================
+----------------------------------------------------------------
+
+[Table of contents]
+
+ 0.General
+ 1.Layout
+ 2.Navigation
+ 3.Header
+ 4.Footer
+ 5.Pages
+     i.
+ 6.Modules
+ 7.Forms
+ 8.Sprites
+ *.User Defined
+
+----------------------------------------------------------------*/
+/* positioning */
+/* sprites */
+/* borders made from backgrounds */
+/* triangles */
+/* css3 */
+/* grid container
+============================================== */
+.container-12 {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative; }
+  .container-12:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+
+/* grid divisions
+============================================== */
+.grid-1,
+.grid-2,
+.grid-3,
+.grid-4,
+.grid-5,
+.grid-6,
+.grid-7,
+.grid-8,
+.grid-9,
+.grid-10,
+.grid-11,
+.grid-12 {
+  margin: 0 5px;
+  padding: 0;
+  display: inline;
+  float: left; }
+
+.grid-1 {
+  width: 70px; }
+
+.grid-2 {
+  width: 150px; }
+
+.grid-3 {
+  width: 230px; }
+
+.grid-4 {
+  width: 310px; }
+
+.grid-5 {
+  width: 390px; }
+
+.grid-6 {
+  width: 470px; }
+
+.grid-7 {
+  width: 550px; }
+
+.grid-8 {
+  width: 630px; }
+
+.grid-9 {
+  width: 710px; }
+
+.grid-10 {
+  width: 790px; }
+
+.grid-11 {
+  width: 870px; }
+
+.grid-12 {
+  width: 950px; }
+
+/*
+ * media queries included
+ * at end of document
+ */
+/* 0.`general
+============================================== */
+::-moz-selection {
+  background: #44a1dd;
+  color: #fff;
+  text-shadow: none; }
+
+::selection {
+  background: #44a1dd;
+  color: #fff;
+  text-shadow: none; }
+
+/* 1.`layout
+============================================== */
+html,
+body {
+  height: 100%;
+  margin: 0; }
+
+/* 2.`navigation
+============================================== */
+nav ul:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+nav li {
+  float: left; }
+
+#main-nav {
+  background-color: #333; }
+  #main-nav:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  #main-nav ul {
+    float: right; }
+  #main-nav li {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+    margin-left: 20px; }
+    #main-nav li a {
+      padding: 10px;
+      font-size: 1.4em;
+      font-weight: 300;
+      color: #fff; }
+
+/* 3.`header
+============================================== */
+#logo {
+  display: block;
+  float: left;
+  width: 186px;
+  height: 35px;
+  background-color: #555;
+  border-right: 1px solid #fff; }
+
+#header {
+  margin-top: 20px; }
+
+/* 4.`footer
+============================================== */
+#footer {
+  margin: 0; }
+
+/* 8.`sprites
+============================================== */
+.icon,
+.sprite {
+  text-indent: -9999px;
+  line-height: 0;
+  font-size: 0;
+  overflow: hidden;
+  display: block; }
+
+.sprite {
+  background-image: url("../img/-sprite-images.png"); }
+
+.icon {
+  background-image: url("../img/-sprite-icons.png"); }
+
+/* media queries */
+/* media queries
+============================================== */
