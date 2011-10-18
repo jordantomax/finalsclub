@@ -94,6 +94,11 @@
 
 /* css3 */
 
+@mixin rounded($radius: 5px) {
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
 @mixin rounded-side($horizontal, $vertical, $magnitude) {
   border-#{$vertical}-#{$horizontal}-radius: $magnitude;
   -moz-border-radius-#{$vertical}#{$horizontal}: $magnitude;
@@ -112,4 +117,10 @@
     -moz-box-shadow: inset $horizontal $vertical $magnitude $color;
     -webkit-box-shadow: inset $horizontal $vertical $magnitude $color;
     box-shadow: inset $horizontal $vertical $magnitude $color;
+}
+
+@mixin drop-shadow($horizontal: 5px, $vertical: 5px, $magnitude: 5px, $color: #888) {
+    -moz-box-shadow: $horizontal $vertical $magnitude $color;
+    -webkit-box-shadow: $horizontal $vertical $magnitude $color;
+    box-shadow: $horizontal $vertical $magnitude $color;
 }

@@ -25,6 +25,10 @@ If you have any questions, Don't be shy. Send me a line!
 ----------------------------------------------------------------*/
 
 $gold: #f2b83b;
+$blue: #367da9;
+$dark-blue: #16567e;
+$green: #78b343;
+$dark-green: #4f901b;
 
 @import "includes/mixins.scss";
 @import "includes/grid.scss";
@@ -48,13 +52,44 @@ hr {
     margin: 0;
     height: 6px;
     clear: both;
-    border-top: 1px solid #fff;
+    border-top: 1px solid #e5e5e5;
     border-bottom: 1px solid #fff;
     background-image: url("../img/bg-stripes.png");
     background-repeat: repeat;
-
+    background-color: #fff;
+  }
+  &.heading {
+    margin-bottom: 16px;
+  }
+  &.bordered {
+    border-bottom: 2px solid $gold;
   }
 }
+
+button {
+  @include rounded;
+  padding: 10px 24px;
+  border: 0;
+
+  &.three-dim.blue {
+    @include drop-shadow(2px, 2px, 0, $dark-blue);
+    background-color: $blue;
+    border: 1px solid $dark-blue;
+    color: #fff;
+  }
+  &.three-dim.green {
+    @include drop-shadow(2px, 2px, 0, $dark-green);
+    background-color: $green;
+    border: 1px solid $dark-green;
+    color: #fff;
+  }
+}
+
+h3.heading {
+  margin-bottom: 2px;
+  padding-left: 12px;
+}
+
 
 /* 1.`layout
 ============================================== */
@@ -63,6 +98,14 @@ html,
 body {
     height : 100%;
     margin : 0;
+    margin: 0;
+    background-image: url("../img/bg-black-noise.gif");
+    background-repeat: repeat;
+}
+
+.header,
+.content {
+  background-color: #fff;
 }
 
 .header {
@@ -157,8 +200,38 @@ body {
 /* 4.`footer
 ============================================== */
 
-#footer {
-    margin: 0;
+.footer {
+  color: #444;
+  padding-top: 24px;
+  #footer-nav {
+    float: right;
+    margin-right: -16px;
+
+    li {
+      display: inline-block;
+      *display: inline;
+    }
+    a {
+      padding: 5px 16px;
+      color: #ccc;
+    }
+  }
+  p {
+    float: right;
+    clear: both;
+    margin-top: 24px;
+  }
+  .creative_commons {
+    .section {
+      clear: both;
+      float: right;
+    }
+    float: right;
+    clear: both;
+    a {
+      color: #777;
+    }
+  }
 }
 
 /* 6.`modules
@@ -170,11 +243,39 @@ body {
   padding-bottom: 0;
 }
 
+.button-set {
+  &.vertical {
+    button {
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.video-wrapper {
+  @include rounded();
+  padding: 5px;
+  background-color: #f5f5f5;
+}
+.schools {
+  ul {
+    @include group;
+  }
+  li {
+    float: left;
+    width: 25%;
+    height: 100px;
+  }
+  em {
+    margin: 0 auto;
+  }
+}
+
 /* 8.`sprites
 ============================================== */
 
 .icon,
-.sprite {
+.sprite,
+.sprite-school {
     text-indent : -9999px;
     line-height : 0;
     font-size   : 0;
@@ -184,7 +285,68 @@ body {
 
 .sprite { background-image : url('../img/finalsclub-sprite-images.png'); }
 .icon { background-image   : url('../img/finalsclub-sprite-icons.png'); }
+.sprite-school { background-image : url("../img/finalsclub-sprite-schools.gif"); }
 
+.brown {
+  background-position: 0 0;
+  width: 61px;
+  height: 72px;
+}
+.columbia {
+  background-position: -62px 0;
+  width: 81px;
+  height: 61px;
+}
+.cornell {
+  background-position: -144px 0;
+  width: 71px;
+  height: 72px;
+}
+.dartmouth {
+  background-position: -216px 0;
+  width: 56px;
+  height: 71px;
+}
+.shield {
+  background-position: -273px 0;
+  width: 59px;
+  height: 60px;
+}
+.mit {
+  background-position: -333px 0;
+  width: 79px;
+  height: 41px;
+}
+.lock_haven {
+  background-position: -413px 0;
+  width: 61px;
+  height: 68px;
+}
+.cal {
+  background-position: -475px 0;
+  width: 91px;
+  height: 72px;
+}
+.texas {
+  background-position: -567px 0;
+  width: 54px;
+  height:68px;
+}
+.yale {
+  background-position: -622px 0;
+  width: 51px;
+  height: 50px;
+}
+.penn {
+  background-position: -674px 0;
+  width: 115px;
+  height:65px;
+}
+.harvard {
+  background-position: -790px 0;
+  width: 67px;
+  height: 65px;
+}
 /* media queries */
 
 @import "includes/media.scss";
@@ -194,3 +356,7 @@ body {
 
 .right { float: right !important;}
 .no-top-margin { margin-top: 0; }
+.spacer {
+  padding-top: 16px;
+  padding-bottom: 32px;
+}

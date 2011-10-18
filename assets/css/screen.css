@@ -213,9 +213,10 @@ h1 .small {
   font-family: "museo-slab";
   font-weight: 700; }
 
-button {
+button,
+#footer-nav a {
   font-family: "museo-sans";
-  font-weight: 700; }
+  font-weight: 500; }
 
 /*
  * media queries included
@@ -237,17 +238,53 @@ hr.stripes {
   margin: 0;
   height: 6px;
   clear: both;
-  border-top: 1px solid #fff;
+  border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #fff;
   background-image: url("../img/bg-stripes.png");
-  background-repeat: repeat; }
+  background-repeat: repeat;
+  background-color: #fff; }
+hr.heading {
+  margin-bottom: 16px; }
+hr.bordered {
+  border-bottom: 2px solid #f2b83b; }
+
+button {
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 10px 24px;
+  border: 0; }
+  button.three-dim.blue {
+    -moz-box-shadow: 2px 2px 0 #16567e;
+    -webkit-box-shadow: 2px 2px 0 #16567e;
+    box-shadow: 2px 2px 0 #16567e;
+    background-color: #367da9;
+    border: 1px solid #16567e;
+    color: #fff; }
+  button.three-dim.green {
+    -moz-box-shadow: 2px 2px 0 #4f901b;
+    -webkit-box-shadow: 2px 2px 0 #4f901b;
+    box-shadow: 2px 2px 0 #4f901b;
+    background-color: #78b343;
+    border: 1px solid #4f901b;
+    color: #fff; }
+
+h3.heading {
+  margin-bottom: 2px;
+  padding-left: 12px; }
 
 /* 1.`layout
 ============================================== */
 html,
 body {
   height: 100%;
-  margin: 0; }
+  margin: 0;
+  margin: 0;
+  background-image: url("../img/bg-black-noise.gif");
+  background-repeat: repeat; }
+
+.header,
+.content {
+  background-color: #fff; }
 
 .header {
   border-top: 2px solid #f2b83b; }
@@ -314,8 +351,30 @@ body {
 
 /* 4.`footer
 ============================================== */
-#footer {
-  margin: 0; }
+.footer {
+  color: #444;
+  padding-top: 24px; }
+  .footer #footer-nav {
+    float: right;
+    margin-right: -16px; }
+    .footer #footer-nav li {
+      display: inline-block;
+      *display: inline; }
+    .footer #footer-nav a {
+      padding: 5px 16px;
+      color: #ccc; }
+  .footer p {
+    float: right;
+    clear: both;
+    margin-top: 24px; }
+  .footer .creative_commons {
+    float: right;
+    clear: both; }
+    .footer .creative_commons .section {
+      clear: both;
+      float: right; }
+    .footer .creative_commons a {
+      color: #777; }
 
 /* 6.`modules
 ============================================== */
@@ -324,10 +383,33 @@ body {
   padding-top: 0;
   padding-bottom: 0; }
 
+.button-set.vertical button {
+  margin-bottom: 16px; }
+
+.video-wrapper {
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #f5f5f5; }
+
+.schools ul:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+.schools li {
+  float: left;
+  width: 25%;
+  height: 100px; }
+.schools em {
+  margin: 0 auto; }
+
 /* 8.`sprites
 ============================================== */
 .icon,
-.sprite {
+.sprite,
+.sprite-school {
   text-indent: -9999px;
   line-height: 0;
   font-size: 0;
@@ -340,6 +422,69 @@ body {
 .icon {
   background-image: url("../img/finalsclub-sprite-icons.png"); }
 
+.sprite-school {
+  background-image: url("../img/finalsclub-sprite-schools.gif"); }
+
+.brown {
+  background-position: 0 0;
+  width: 61px;
+  height: 72px; }
+
+.columbia {
+  background-position: -62px 0;
+  width: 81px;
+  height: 61px; }
+
+.cornell {
+  background-position: -144px 0;
+  width: 71px;
+  height: 72px; }
+
+.dartmouth {
+  background-position: -216px 0;
+  width: 56px;
+  height: 71px; }
+
+.shield {
+  background-position: -273px 0;
+  width: 59px;
+  height: 60px; }
+
+.mit {
+  background-position: -333px 0;
+  width: 79px;
+  height: 41px; }
+
+.lock_haven {
+  background-position: -413px 0;
+  width: 61px;
+  height: 68px; }
+
+.cal {
+  background-position: -475px 0;
+  width: 91px;
+  height: 72px; }
+
+.texas {
+  background-position: -567px 0;
+  width: 54px;
+  height: 68px; }
+
+.yale {
+  background-position: -622px 0;
+  width: 51px;
+  height: 50px; }
+
+.penn {
+  background-position: -674px 0;
+  width: 115px;
+  height: 65px; }
+
+.harvard {
+  background-position: -790px 0;
+  width: 67px;
+  height: 65px; }
+
 /* media queries */
 /* media queries
 ============================================== */
@@ -350,3 +495,7 @@ body {
 
 .no-top-margin {
   margin-top: 0; }
+
+.spacer {
+  padding-top: 16px;
+  padding-bottom: 32px; }
