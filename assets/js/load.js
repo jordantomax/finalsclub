@@ -7,8 +7,5 @@ Modernizr.load([
             }
         }
     },
-    {
-        load: "assets/js/forms.js",
-    },
     "assets/js/init.js"
 ]);

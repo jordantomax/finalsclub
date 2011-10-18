@@ -1,14 +1,17 @@
 
 /* grid container
 ============================================== */
+$cols: 12;
+$margin: 5;
+$layout-width: 950 + $margin * 2;
+$col-width: $layout-width / $cols - $margin * 2;
 
-$col_width: 70;
 
-.container-12 {
-    @include group;
-    max-width: 1280px;
-    margin: 0 auto;
-    position: relative;
+.container-#{$cols} {
+  @include group;
+  width: $layout-width + px;
+  margin: 0 auto;
+  position: relative;
 }
 
 /* grid divisions
@@ -26,14 +29,20 @@ $col_width: 70;
 .grid-10,
 .grid-11,
 .grid-12 {
-    margin: 0 5px;
-    padding: 0;
-    display: inline;
-    float: left;
+  margin: #{$margin * 2}px $margin + px 0;
+  padding: 0;
+  display: inline;
+  float: left;
 }
 
-@for $i from 1 through 12 {
-    .grid-#{$i} {
-        width: ($col_width * $i) + (10 * ($i - 1)) + px;
-    }
+@for $i from 1 through $cols {
+  .grid-#{$i} {
+    width: ($col_width * $i) + ($margin * 2 * ($i - 1)) + px;
+  }
+}
+
+@for $i from 1 through $cols {
+  .from-left-#{$i} {
+    margin-left: ($col_width * $i) + ($margin * 2 * ($i - 1)) + px;
+  }
 }

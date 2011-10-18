@@ -20,9 +20,9 @@ audio:not([controls]) { display: none; }
 
 * { font-family: "helvetica neue", "helvetica", "arial", "Sans-serif"; }
 
-html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+html { overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
-body { margin: 0; font-size: 65%; line-height: 100%; }
+body { margin: 0; line-height: 100%; }
 
 body, button, input, select, textarea { font-family: sans-serif; color: #222; }
 

@@ -24,8 +24,11 @@ If you have any questions, Don't be shy. Send me a line!
 
 ----------------------------------------------------------------*/
 
+$gold: #f2b83b;
+
 @import "includes/mixins.scss";
 @import "includes/grid.scss";
+@import "includes/type.scss";
 
 /*
  * media queries included
@@ -40,6 +43,19 @@ If you have any questions, Don't be shy. Send me a line!
 ::selection { background: #44a1dd; color: #fff; text-shadow: none; }
 
 
+hr {
+  &.stripes {
+    margin: 0;
+    height: 6px;
+    clear: both;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    background-image: url("../img/bg-stripes.png");
+    background-repeat: repeat;
+
+  }
+}
+
 /* 1.`layout
 ============================================== */
 
@@ -49,24 +65,44 @@ body {
     margin : 0;
 }
 
+.header {
+//  @include rounded-side("left", "top", 8px);
+//  @include rounded-side("right", "top", 8px);
+//  margin-top: 10px;
+//  background-image: url("../img/bg-black-noise.gif");
+//  background-repeat: repeat;
+//  border-bottom: 2px solid $gold;
+  border-top: 2px solid $gold;
+}
+
 
 /* 2.`navigation
 ============================================== */
 
-nav {
-    ul {
-        @include group;
+#user-nav {
+  float: right;
+
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+    margin-left: 20px;
+    color: #707070;
+
+    a {
+      display: block;
+      color: #707070;
+      padding: 0 10px;
     }
-    li {
-        float: left;
-    }
+  }
 }
+
 #main-nav {
     @include group;
-    background-color: #333;
+    clear: both;
 
     ul {
-        float: right;
+      float: right;
     }
     li {
         display: inline-block;
@@ -75,25 +111,43 @@ nav {
         margin-left: 20px;
 
         a {
-            padding: 10px;
-            font-size: 1.4em;
-            font-weight: 300;
-            color: #fff;
+          display: block;
+          padding: 10px;
+          text-transform: uppercase;
+          color: #888;
+
+          &.active {
+            position: relative;
+            color: #000;
+
+            em {
+              position: absolute;
+              left: -10px;
+              top: 50%;
+              margin-top: -8px;
+              background-position: 0 0;
+              width: 14px;
+              height: 14px;
+              background-repeat: no-repeat;
+            }
+          }
+
+          &:hover {
+            color: #000;
+          }
         }
     }
 }
+
 
 
 /* 3.`header
 ============================================== */
 
 #logo {
-    display: block;
-    float: left;
-    width: 186px;
-    height: 35px;
-    background-color: #555;
-    border-right: 1px solid #fff;
+  float: left;
+  padding: 5px;
+  margin-left: 10px;
 }
 #header {
     margin-top: 20px;
@@ -107,6 +161,14 @@ nav {
     margin: 0;
 }
 
+/* 6.`modules
+============================================== */
+
+.padded-loose {
+  padding: 10px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
 
 /* 8.`sprites
 ============================================== */
@@ -120,9 +182,15 @@ nav {
     display     : block;
 }
 
-.sprite { background-image : url('../img/-sprite-images.png'); }
-.icon { background-image   : url('../img/-sprite-icons.png'); }
+.sprite { background-image : url('../img/finalsclub-sprite-images.png'); }
+.icon { background-image   : url('../img/finalsclub-sprite-icons.png'); }
 
 /* media queries */
 
 @import "includes/media.scss";
+
+/* *.`user defined
+============================================== */
+
+.right { float: right !important;}
+.no-top-margin { margin-top: 0; }

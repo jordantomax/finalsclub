@@ -261,16 +261,3 @@
     font-style: normal;
 
 }
-
-@font-face {
-    font-family: 'ATSackersHeavyGothic';
-    src: url('fonts/AT-Sackers-heavy-gothic/atsackersheavygothic.eot');
-    src: url('fonts/AT-Sackers-heavy-gothic/atsackersheavygothic.eot?#iefix') format('embedded-opentype'),
-         url('fonts/AT-Sackers-heavy-gothic/atsackersheavygothic.woff') format('woff'),
-         url('fonts/AT-Sackers-heavy-gothic/atsackersheavygothic.ttf') format('truetype'),
-         url('fonts/AT-Sackers-heavy-gothic/atsackersheavygothic.svg#atsackersheavygothic') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
