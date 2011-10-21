@@ -99,7 +99,7 @@
   border-radius: $radius;
 }
 
-@mixin rounded-side($horizontal, $vertical, $magnitude) {
+@mixin rounded-side($horizontal, $vertical, $magnitude: 5px) {
   border-#{$vertical}-#{$horizontal}-radius: $magnitude;
   -moz-border-radius-#{$vertical}#{$horizontal}: $magnitude;
   -webkit-border-#{$vertical}-#{$horizontal}-radius: $magnitude;

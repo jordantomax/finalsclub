@@ -29,7 +29,7 @@ $col-width: $layout-width / $cols - $margin * 2;
 .grid-10,
 .grid-11,
 .grid-12 {
-  margin: #{$margin * 2}px $margin + px 0;
+  margin: $margin + px $margin + px;
   padding: 0;
   display: inline;
   float: left;
