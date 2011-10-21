@@ -46,3 +46,9 @@ $col-width: $layout-width / $cols - $margin * 2;
     margin-left: ($col_width * $i) + ($margin * 2 * ($i - 1)) + px;
   }
 }
+
+.grid-centered {
+  display: block;
+  float: none;
+  margin: 0 auto;
+}

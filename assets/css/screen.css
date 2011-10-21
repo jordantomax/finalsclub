@@ -132,6 +132,11 @@ If you have any questions, Don't be shy. Send me a line!
 .from-left-12 {
   margin-left: 950px; }
 
+.grid-centered {
+  display: block;
+  float: none;
+  margin: 0 auto; }
+
 * {
   font-family: "Verdana", "Helvetica Neue", "Arial", "Sans-serif"; }
 
