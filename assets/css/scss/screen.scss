@@ -50,7 +50,7 @@ $dark-green: #4f901b;
 hr {
   &.stripes {
     margin: 0;
-    height: 8px;
+    height: 16px;
     clear: both;
     border-top: 1px solid #e5e5e5;
     border-bottom: 1px solid #fff;
@@ -75,17 +75,21 @@ button {
   padding: 8px 24px;
   border: 0;
 
-  &.three-dim.blue {
-    @include drop-shadow(2px, 2px, 0, $dark-blue);
+  &.blue {
     background-color: $blue;
     border: 1px solid $dark-blue;
     color: #fff;
   }
-  &.three-dim.green {
-    @include drop-shadow(2px, 2px, 0, $dark-green);
+  &.green {
     background-color: $green;
     border: 1px solid $dark-green;
     color: #fff;
+  }
+  &.three-dim.blue {
+    @include drop-shadow(2px, 2px, 0, $dark-blue);
+  }
+  &.three-dim.green {
+    @include drop-shadow(2px, 2px, 0, $dark-green);
   }
 }
 
@@ -284,6 +288,7 @@ body {
   @include rounded();
   padding: 5px;
   background-color: #f5f5f5;
+  text-align: center;
 }
 .schools {
   ul {

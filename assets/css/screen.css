@@ -31,7 +31,8 @@ If you have any questions, Don't be shy. Send me a line!
 /* grid container
 ============================================== */
 .container-12 {
-  width: 960px;
+  max-width: 1200px;
+  min-width: 960px;
   margin: 0 auto;
   position: relative; }
   .container-12:after {
@@ -61,40 +62,40 @@ If you have any questions, Don't be shy. Send me a line!
   float: left; }
 
 .grid-1 {
-  width: 70px; }
+  width: 7.292%; }
 
 .grid-2 {
-  width: 150px; }
+  width: 15.625%; }
 
 .grid-3 {
-  width: 230px; }
+  width: 23.958%; }
 
 .grid-4 {
-  width: 310px; }
+  width: 32.292%; }
 
 .grid-5 {
-  width: 390px; }
+  width: 40.625%; }
 
 .grid-6 {
-  width: 470px; }
+  width: 48.958%; }
 
 .grid-7 {
-  width: 550px; }
+  width: 57.292%; }
 
 .grid-8 {
-  width: 630px; }
+  width: 65.625%; }
 
 .grid-9 {
-  width: 710px; }
+  width: 73.958%; }
 
 .grid-10 {
-  width: 790px; }
+  width: 82.292%; }
 
 .grid-11 {
-  width: 870px; }
+  width: 90.625%; }
 
 .grid-12 {
-  width: 950px; }
+  width: 98.958%; }
 
 .from-left-1 {
   margin-left: 70px; }
@@ -243,7 +244,7 @@ button,
 
 hr.stripes {
   margin: 0;
-  height: 8px;
+  height: 16px;
   clear: both;
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #fff;
@@ -263,20 +264,22 @@ button {
   border-radius: 5px;
   padding: 8px 24px;
   border: 0; }
-  button.three-dim.blue {
-    -moz-box-shadow: 2px 2px 0 #16567e;
-    -webkit-box-shadow: 2px 2px 0 #16567e;
-    box-shadow: 2px 2px 0 #16567e;
+  button.blue {
     background-color: #367da9;
     border: 1px solid #16567e;
     color: #fff; }
-  button.three-dim.green {
-    -moz-box-shadow: 2px 2px 0 #4f901b;
-    -webkit-box-shadow: 2px 2px 0 #4f901b;
-    box-shadow: 2px 2px 0 #4f901b;
+  button.green {
     background-color: #78b343;
     border: 1px solid #4f901b;
     color: #fff; }
+  button.three-dim.blue {
+    -moz-box-shadow: 2px 2px 0 #16567e;
+    -webkit-box-shadow: 2px 2px 0 #16567e;
+    box-shadow: 2px 2px 0 #16567e; }
+  button.three-dim.green {
+    -moz-box-shadow: 2px 2px 0 #4f901b;
+    -webkit-box-shadow: 2px 2px 0 #4f901b;
+    box-shadow: 2px 2px 0 #4f901b; }
 
 h3.heading {
   margin-bottom: 16px;
@@ -437,7 +440,8 @@ body {
   -moz-border-radius: 5px;
   border-radius: 5px;
   padding: 5px;
-  background-color: #f5f5f5; }
+  background-color: #f5f5f5;
+  text-align: center; }
 
 .schools ul:after {
   content: ".";
