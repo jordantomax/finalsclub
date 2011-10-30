@@ -262,7 +262,10 @@ button {
   -moz-border-radius: 5px;
   border-radius: 5px;
   padding: 8px 24px;
-  border: 0; }
+  border: 0;
+  background-image: url("../img/button-bg.png");
+  background-repeat: repeat-x;
+  background-position: left bottom; }
   button.blue {
     background-color: #367da9;
     border: 1px solid #16567e;
@@ -386,6 +389,11 @@ body {
 
 #header {
   margin-top: 20px; }
+
+.highlight {
+  background-image: url("../img/logo-bg.png");
+  background-position: left bottom;
+  background-repeat: no-repeat; }
 
 /* 4.`footer
 ============================================== */
