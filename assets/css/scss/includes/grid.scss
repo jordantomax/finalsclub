@@ -9,9 +9,7 @@ $col-width: $layout-width / $cols - $margin * 2;
 
 .container-#{$cols} {
   @include group;
-//  width: $layout-width + px;
-  max-width: 1200px;
-  min-width: $layout-width + px;
+  width: $layout-width + px;
   margin: 0 auto;
   position: relative;
 }
